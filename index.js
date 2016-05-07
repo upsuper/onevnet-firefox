@@ -11,7 +11,7 @@ const PROXY_TYPE_PAC = 2; // 使用PAC
 
 var button = ToggleButton({
   id: "onenet",
-  label: "点击启用或关闭OneNet服务",
+  label: "点击启用或关闭OneVnet服务",
   icon: "./img/128x128.png",
   onChange: state => {
     if (state.checked) {
