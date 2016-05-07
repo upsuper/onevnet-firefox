@@ -1,0 +1,6 @@
+.DS_Store
+*.zip
+*.xpi
+.git/
+.gitignore
+.jpmignore

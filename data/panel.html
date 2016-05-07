@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>扩展栏菜单</title>
+  <style>
+    body { font: 14px/20px sans-serif; margin: 0px; }
+    #desc {
+      font-size: 80%;
+      color: #666;
+      text-align: center;
+    }
+    section {
+      padding: 5px 0;
+      border-top: 1px solid #e5e5e5;
+    }
+    h2 {
+      font: inherit;
+      margin: 5px;
+      text-align: center;
+    }
+    button {
+      display: block;
+      width: 180px;
+      padding: 6px 12px;
+      color: white;
+      margin: 5px auto;
+      cursor: pointer;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      font: 12px/18px sans-serif;
+    }
+    button.active,
+    button:active {
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, .125) inset;
+    }
+    button {
+      background-color: #5cb85c;
+      border-color: #4cae4c;
+    }
+    button:hover {
+      background-color: #449d44;
+      border-color: #398439;
+    }
+    button.active,
+    button:active {
+      background-color: #398439;
+      border-color: #255625;
+    }
+    #close > button {
+      background-color: #d9534f;
+      border-color: #d43f3a;
+    }
+    #close > button:hover {
+      background-color: #c9302c;
+      border-color: #ac2925;
+    }
+    #close > button.active,
+    #close > button:active {
+      background-color: #ac2925;
+      border-color: #761c19;
+    }
+    #other > button {
+      background-color: #337ab7;
+      border-color: #2e6da4;
+    }
+    #other > button:hover {
+      background-color: #286090;
+      border-color: #204d74;
+    }
+    #other > button.active,
+    #other > button:active {
+      background-color: #204d74;
+      border-color: #122b40;
+    }
+  </style>
+</head>
+<body>
+  <p id="desc">推荐选择距离较近的服务区</p>
+  <section>
+    <h2>智能模式</h2>
+    <button data-proxy="jp">亚洲东部</button>
+    <button data-proxy="us">美洲北部</button>
+    <button data-proxy="fr">欧洲及非洲</button>
+    <button data-proxy="sg">东南亚及澳洲</button>
+  </section>
+  <section>
+    <h2>全局模式</h2>
+    <button data-proxy="jp_all">亚洲东部</button>
+    <button data-proxy="us_all">美洲北部</button>
+    <button data-proxy="fr_all">欧洲及非洲</button>
+    <button data-proxy="sg_all">东南亚及澳洲</button>
+  </section>
+  <section id="close">
+    <button data-proxy>停止使用</button>
+  </section>
+  <section id="other">
+    <h2>其他</h2>
+    <button data-link="https://vnet.one/me">仪表盘</button>
+  </section>
+</body>
+</html>
