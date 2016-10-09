@@ -1,7 +1,7 @@
 {
   "title": "OneVnet (Unofficial)",
   "name": "onevnet-unofficial",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "帮您快速设置OneVnet，畅游网络。",
   "main": "index.js",
   "author": "Xidorn Quan",
