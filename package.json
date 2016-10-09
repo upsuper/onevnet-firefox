@@ -1,12 +1,15 @@
 {
   "title": "OneVnet (Unofficial)",
   "name": "onevnet-unofficial",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "帮您快速设置OneVnet，畅游网络。",
   "main": "index.js",
   "author": "Xidorn Quan",
   "engines": {
     "firefox": ">=38.0a1"
+  },
+  "permissions": {
+      "multiprocess": true
   },
   "license": "MIT"
 }
