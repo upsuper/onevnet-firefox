@@ -24,7 +24,7 @@ var panel = Panel({
   contentURL: "./panel.html",
   contentScriptFile: "./panel.js",
   width: 380,
-  height: 375,
+  height: 410,
   onHide: () => {
     button.state('window', {checked: false});
   }
@@ -35,24 +35,9 @@ panel.port.on("link", link => {
   panel.hide();
 });
 
-let pac = {
-  jp: 'http://pac.vnet.one/9',
-  us: 'http://pac.vnet.one/11',
-  sg: 'http://pac.vnet.one/12',
-  fr: 'http://pac.vnet.one/10',
-  hk: 'http://pac.vnet.one/286',
-  in: 'http://pac.vnet.one/734',
-  jp_all: 'http://pac.vnet.one/13',
-  us_all: 'http://pac.vnet.one/15',
-  sg_all: 'http://pac.vnet.one/16',
-  fr_all: 'http://pac.vnet.one/14',
-  hk_all: 'http://pac.vnet.one/287',
-  in_all: 'http://pac.vnet.one/735',
-};
-
 function switchProxy(name = "") {
   if (name) {
-    prefs.set(PROXY_AUTOCONFIG_PREF, pac[name]);
+    prefs.set(PROXY_AUTOCONFIG_PREF, self.data.url(`pac/${name}.pac`));
     prefs.set(PROXY_TYPE_PREF, PROXY_TYPE_PAC);
   } else {
     prefs.set(PROXY_AUTOCONFIG_PREF, "");
