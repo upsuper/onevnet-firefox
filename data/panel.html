@@ -9,7 +9,7 @@
     }
     body {
       font: 14px/20px sans-serif; margin: 0;
-      width: 380px;
+      width: 200px;
     }
     #desc {
       font-size: 80%;
@@ -18,9 +18,10 @@
     }
     section {
       padding: 5px 0;
-      border-top: 1px solid #e5e5e5;
       margin: 0 5px;
-      float: left;
+    }
+    section:not(:first-child) {
+      border-top: 1px solid #e5e5e5;
     }
     h2 {
       font: inherit;
@@ -84,26 +85,15 @@
   </style>
 </head>
 <body>
-  <p id="desc">推荐选择距离较近的服务区</p>
   <section>
     <h2>智能模式</h2>
-    <button data-proxy="hk">港澳台</button>
-    <button data-proxy="jp">亚洲东部</button>
-    <button data-proxy="in">亚洲西部与中部</button>
-    <button data-proxy="us">美洲北部</button>
-    <button data-proxy="fr">欧洲与非洲</button>
-    <button data-proxy="sg">东南亚与澳洲</button>
-    <button data-proxy="au">澳大利亚</button>
+    <button data-proxy="hsl1">高速线-1</button>
+    <button data-proxy="hsl2">高速线-2</button>
   </section>
   <section>
     <h2>全局模式</h2>
-    <button data-proxy="hk_all">港澳台</button>
-    <button data-proxy="jp_all">亚洲东部</button>
-    <button data-proxy="in_all">亚洲西部与中部</button>
-    <button data-proxy="us_all">美洲北部</button>
-    <button data-proxy="fr_all">欧洲与非洲</button>
-    <button data-proxy="sg_all">东南亚与澳洲</button>
-    <button data-proxy="au_all">澳大利亚</button>
+    <button data-proxy="hsl1_all">高速线-1</button>
+    <button data-proxy="hsl2_all">高速线-2</button>
   </section>
   <section id="close">
     <button data-proxy>停止使用</button>

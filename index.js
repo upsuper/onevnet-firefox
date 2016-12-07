@@ -23,8 +23,8 @@ var button = ToggleButton({
 var panel = Panel({
   contentURL: "./panel.html",
   contentScriptFile: "./panel.js",
-  width: 380,
-  height: 410,
+  width: 200,
+  height: 350,
   onHide: () => {
     button.state('window', {checked: false});
   }
