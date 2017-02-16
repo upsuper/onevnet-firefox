@@ -1,4 +1,4 @@
-//Version 2016-11-29
+//Version 2017-1-26
 function base64decode(str) {
     var c1, c2, c3, c4;
     var i, len, out;
@@ -95,11 +95,12 @@ function FindProxyForURL(url, host){
 
     var D = 'DIRECT';
     //ServerList
-    if(isHTTPS(url)===false){
-        var P = 'HTTPS hsline-2.vnet.one:443;HTTPS hsline-2.vnet.one:465;HTTPS hsline-2.vnet.one:311;HTTPS hsline-2.vnet.one:321;HTTPS hsline-2.vnet.one:331;PROXY hsline-2.vnet.one:80;PROXY hsline-2.vnet.one:310;PROXY hsline-2.vnet.one:143;PROXY hsline-2.vnet.one:320;PROXY hsline-2.vnet.one:330;PROXY hsline-2.vnet.one:2048;';
-    }else{
-        var P = 'PROXY hsline-2.vnet.one:80;PROXY hsline-2.vnet.one:310;PROXY hsline-2.vnet.one:143;PROXY hsline-2.vnet.one:320;PROXY hsline-2.vnet.one:330;PROXY hsline-2.vnet.one:2048;HTTPS hsline-2.vnet.one:443;HTTPS hsline-2.vnet.one:465;HTTPS hsline-2.vnet.one:311;HTTPS hsline-2.vnet.one:321;HTTPS hsline-2.vnet.one:331;';
-    }
+    var P = 'HTTPS hsline-2.vnet.one:443;HTTPS hsline-2.vnet.one:465;HTTPS hsline-2.vnet.one:311;HTTPS hsline-2.vnet.one:321;HTTPS hsline-2.vnet.one:331;PROXY hsline-2.vnet.one:80;PROXY hsline-2.vnet.one:310;PROXY hsline-2.vnet.one:143;PROXY hsline-2.vnet.one:320;PROXY hsline-2.vnet.one:330;PROXY hsline-2.vnet.one:2048;';
+    //if(isHTTPS(url)===false){
+    //    var P = 'HTTPS hsline-2.vnet.one:443;HTTPS hsline-2.vnet.one:465;HTTPS hsline-2.vnet.one:311;HTTPS hsline-2.vnet.one:321;HTTPS hsline-2.vnet.one:331;PROXY hsline-2.vnet.one:80;PROXY hsline-2.vnet.one:310;PROXY hsline-2.vnet.one:143;PROXY hsline-2.vnet.one:320;PROXY hsline-2.vnet.one:330;PROXY hsline-2.vnet.one:2048;';
+    //}else{
+    //    var P = 'PROXY hsline-2.vnet.one:80;PROXY hsline-2.vnet.one:310;PROXY hsline-2.vnet.one:143;PROXY hsline-2.vnet.one:320;PROXY hsline-2.vnet.one:330;PROXY hsline-2.vnet.one:2048;HTTPS hsline-2.vnet.one:443;HTTPS hsline-2.vnet.one:465;HTTPS hsline-2.vnet.one:311;HTTPS hsline-2.vnet.one:321;HTTPS hsline-2.vnet.one:331;';
+    //}
     
     //Check-Tunnel
     if(host==='check.vnet.one'){
