@@ -31,6 +31,7 @@
     button {
       display: block;
       width: 180px;
+      height: 32px;
       padding: 6px 12px;
       color: white;
       margin: 5px auto;
@@ -38,6 +39,7 @@
       border: 1px solid transparent;
       border-radius: 4px;
       font: 12px/18px sans-serif;
+      box-sizing: border-box;
     }
     button.active,
     button:active {
@@ -89,11 +91,13 @@
     <h2>智能模式</h2>
     <button data-proxy="hsl1">高速线-1</button>
     <button data-proxy="hsl2">高速线-2</button>
+    <button data-proxy="hsl3">澳洲专线</button>
   </section>
   <section>
     <h2>全局模式</h2>
     <button data-proxy="hsl1_all">高速线-1</button>
     <button data-proxy="hsl2_all">高速线-2</button>
+    <button data-proxy="hsl3_all">澳洲专线</button>
   </section>
   <section id="close">
     <button data-proxy>停止使用</button>

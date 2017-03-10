@@ -24,7 +24,7 @@ var panel = Panel({
   contentURL: "./panel.html",
   contentScriptFile: "./panel.js",
   width: 200,
-  height: 350,
+  height: 410,
   onHide: () => {
     button.state('window', {checked: false});
   }
