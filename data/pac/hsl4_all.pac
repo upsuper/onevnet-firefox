@@ -1,4 +1,4 @@
-//Version 2017-1-26
+//Version 2017-4-12
 function base64decode(str) {
     var c1, c2, c3, c4;
     var i, len, out;
@@ -55,7 +55,15 @@ function base64decode(str) {
 }
 
 function suffix(s1, s2) {
-    return s1.indexOf(s2, s1.length - s2.length) !== -1;
+    var s3 = '.'+s2;
+    var hit = s1.indexOf(s3, s1.length - s3.length) !== -1
+    if(hit === true){
+        return true;
+    }
+    if(s1 === s2){
+        return true;
+    }
+    return false; 
 }
 
 function isHTTPS(s1) {
@@ -102,16 +110,17 @@ function FindProxyForURL(url, host){
         return P;
     }
     
+    //Preload-DirectGo
+    if(suffix(host,'vnet.link')||suffix(host,'vnet.one')){
+        return D;
+    }
+    
     var L_direct = eval(base64decode('WyJlYmF0ZXMuY24iXQ=='));
 var L1x = loopc(L_direct,host,D);
 if(L1x!==false){return L1x;}
     
         
         
-    //Preload-DirectGo
-    if(suffix(host,'vnet.link')||suffix(host,'vnet.one')){
-        return D;
-    }
         
         
         

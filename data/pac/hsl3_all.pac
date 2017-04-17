@@ -1,4 +1,4 @@
-//Version 2017-1-26
+//Version 2017-4-12
 function base64decode(str) {
     var c1, c2, c3, c4;
     var i, len, out;
@@ -55,7 +55,15 @@ function base64decode(str) {
 }
 
 function suffix(s1, s2) {
-    return s1.indexOf(s2, s1.length - s2.length) !== -1;
+    var s3 = '.'+s2;
+    var hit = s1.indexOf(s3, s1.length - s3.length) !== -1
+    if(hit === true){
+        return true;
+    }
+    if(s1 === s2){
+        return true;
+    }
+    return false; 
 }
 
 function isHTTPS(s1) {
@@ -96,24 +104,20 @@ function FindProxyForURL(url, host){
     var D = 'DIRECT';
     //ServerList
     var P = 'HTTPS hsline-3.vnet.one:443;HTTPS hsline-3.vnet.one:465;HTTPS hsline-3.vnet.one:311;HTTPS hsline-3.vnet.one:321;HTTPS hsline-3.vnet.one:331;PROXY hsline-3.vnet.one:80;PROXY hsline-3.vnet.one:310;PROXY hsline-3.vnet.one:143;PROXY hsline-3.vnet.one:320;PROXY hsline-3.vnet.one:330;PROXY hsline-3.vnet.one:2048;';
-    //if(isHTTPS(url)===false){
-    //    var P = 'HTTPS hsline-3.vnet.one:443;HTTPS hsline-3.vnet.one:465;HTTPS hsline-3.vnet.one:311;HTTPS hsline-3.vnet.one:321;HTTPS hsline-3.vnet.one:331;PROXY hsline-3.vnet.one:80;PROXY hsline-3.vnet.one:310;PROXY hsline-3.vnet.one:143;PROXY hsline-3.vnet.one:320;PROXY hsline-3.vnet.one:330;PROXY hsline-3.vnet.one:2048;';
-    //}else{
-    //    var P = 'PROXY hsline-3.vnet.one:80;PROXY hsline-3.vnet.one:310;PROXY hsline-3.vnet.one:143;PROXY hsline-3.vnet.one:320;PROXY hsline-3.vnet.one:330;PROXY hsline-3.vnet.one:2048;HTTPS hsline-3.vnet.one:443;HTTPS hsline-3.vnet.one:465;HTTPS hsline-3.vnet.one:311;HTTPS hsline-3.vnet.one:321;HTTPS hsline-3.vnet.one:331;';
-    //}
     
     //Check-Tunnel
     if(host==='check.vnet.one'){
         return P;
     }
     
-        
-        
-        
     //Preload-DirectGo
     if(suffix(host,'vnet.link')||suffix(host,'vnet.one')){
         return D;
     }
+    
+        
+        
+        
         
         
         
