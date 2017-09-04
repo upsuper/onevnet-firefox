@@ -104,7 +104,7 @@ function FindProxyForURL(url, host){
 
     var D = 'DIRECT';
     //ServerList
-    var P = 'HTTPS hsline-1.vnet.one:443;HTTPS hsline-1.vnet.one:465;HTTPS hsline-1.vnet.one:311;HTTPS hsline-1.vnet.one:321;HTTPS hsline-1.vnet.one:331;PROXY hsline-1.vnet.one:310;PROXY hsline-1.vnet.one:143;PROXY hsline-1.vnet.one:320;PROXY hsline-1.vnet.one:330;PROXY hsline-1.vnet.one:2048;';
+    var P = 'HTTPS hsline-5.vnet.one:443;HTTPS hsline-5.vnet.one:465;HTTPS hsline-5.vnet.one:311;HTTPS hsline-5.vnet.one:321;HTTPS hsline-5.vnet.one:331;PROXY hsline-5.vnet.one:310;PROXY hsline-5.vnet.one:143;PROXY hsline-5.vnet.one:320;PROXY hsline-5.vnet.one:330;PROXY hsline-5.vnet.one:2048;';
     
     //Check-Tunnel
     if(host==='check.vnet.one'){
@@ -116,10 +116,7 @@ function FindProxyForURL(url, host){
         return D;
     }
     
-    var L_direct = eval(base64decode('WyJlYmF0ZXMuY24iXQ=='));
-var L1x = loopc(L_direct,host,D);
-if(L1x!==false){return L1x;}
-    
+        
         //Preload-Out
     var L_service_out = eval(base64decode('WyJ5b3VrdS5jb20iLCJ0dWRvdS5jb20iLCJhZG1hc3Rlci5jb20uY24iLCJpcnMwMS5jb20iLCJhbGltYW1hLmNuIiwidGFueC5jb20iLCJ6YW1wZHNwLmNvbSIsIm1tc3RhdC5jb20iLCJhbGljZG4uY29tIiwibWlhb3poZW4uY29tIiwieWtpbWcuY29tIiwiZ3RhZ3MubmV0IiwiY3ItbmllbHNlbi5jb20iLCJ0ZGltZy5jb20iLCJ0YW9iYW9jZG4uY29tIiwibWVkaWF2LmNvbSIsInFpeWkuY29tIiwicDB5LmNuIiwicWxvZ28uY24iLCJzaW5haW1nLmNuIiwiaXBpbnlvdS5jb20iLCJndGltZy5jbiIsIjM2MGJ1eWltZy5jb20iLCJ0ZW5jZW50bWluZC5jb20iLCJndGltZy5jb20iLCIzLmNuIiwic29odS5jb20iLCJpcnMwMS5uZXQiLCJpdGMuY24iLCJ3cmF0aW5nLmNvbSIsInNvZ291LmNvbSIsIm9wdGFpbS5jb20iLCJiYWlkdXN0YXRpYy5jb20iLCJiYWlkdS5jb20iLCJwYWlwYWlpbWcuY29tIiwibW1jZG4uY24iLCJtbHQwMS5jb20iLCJhY3M4Ni5jb20iLCJ4dW5sZWkuY29tIiwia2Fua2FuLmNvbSIsInNhbmRhaS5uZXQiLCJrYW5pbWcuY29tIiwicmV2c2NpLm5ldCIsInNjb3JlY2FyZHJlc2VhcmNoLmNvbSIsImJpbGliaWxpLmNvbSIsImJpbGliaWxpLnR2IiwiYWNndmlkZW8uY29tIiwiaGRzbGIuY29tIiwiZnVuc2hpb24uY29tIiwiZnVuc2hpb24ubmV0IiwiYmFpZHVwY3MuY29tIiwiZG91YmxlY2xpY2submV0Iiwiemhpeml5dW4uY29tIiwiNnJvb21zLmNvbSIsIjYuY24iLCJsZXR2LmNvbSIsImxldHZjZG4uY29tIiwiYWRtYXN0ZXIuY29tIiwibGV0di5jbiIsIm1tMTExLm5ldCIsImFjZnVuLnR2IiwibGV0dmNsb3VkLmNvbSIsImxlLmNvbSIsImlzdHJlYW1zY2hlLmNvbSIsInRvdWRvdXVpLmNvbSIsIjE2My5jb20iLCIxMjYubmV0IiwiMTI3Lm5ldCIsInFxLmNvbSIsImNuIiwidG91ZG91LmNvbSIsImlwLmNuIiwiaXAxMzguY29tIiwiaXFpeWkuY29tIiwiNzEuYW0iLCJxaXlpcGljLmNvbSIsInBwcy50diIsInBwdHYuY29tIiwicHBsaXZlLmNuIiwicHBsaXZlLmNvbSIsImcxZC5uZXQiLCJzeW5hY2FzdC5jb20iLCJqZC5jb20iLCJ2YW1ha2VyLmNvbSIsImFkbWFzdGVyLmNvbS5jbiIsImxldHZpbWcuY29tIiwibGVjbG91ZC5jb20iLCJjbG91ZGNkbi5uZXQiLCJ3c2NkbnMuY29tIiwid2VidGVycmVuLmNvbSIsImZhbmN5YXBpLmNvbSIsIm1vb2tpZTEuY29tIiwid3JhdGluZy5jb20iLCJmYXN0YXBpLm5ldCIsImxwaGJzLmNvbSIsImNvbnZpdmEuY29tIiwiY2N0dnBpYy5jb20iLCJnb29nbGVzeW5kaWNhdGlvbi5jb20iLCJnb29nbGVhZHNlcnZpY2VzLmNvbSIsInFoaW1nLmNvbSIsImdyaWRzdW1kaXNzZWN0b3IuY29tIiwiZ29vZ2xldGFnc2VydmljZXMuY29tIiwiZG91YmFuLmZtIiwiZG91YmFuaW8uY29tIiwiZG91YmFuLmNvbSIsInZpc3VhbHdlYnNpdGVvcHRpbWl6ZXIuY29tIiwibmV0ZWFzZS5jb20iLCJodXB1LmNvbSIsImRpdGllenUuY29tIiwic2FuZ3Vvc2hhLmNvbSJd'));
     var L2x_out = loopc(L_service_out,host,P);
