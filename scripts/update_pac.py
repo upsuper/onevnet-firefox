@@ -15,7 +15,7 @@ def main():
     ext_path = Path(sys.argv[1])
     re_pac = re.compile(r"^\{id: 'pac_(.+?)', .+, " +
                         r"pac_url: '(.+?)', name: '(.+?)'")
-    pac_dir = Path(__file__).parent.joinpath('../data/pac')
+    pac_dir = Path(__file__).parent.joinpath('../pac')
     with ext_path.joinpath('js/popup2.js').open() as f:
         for line in f:
             match = re_pac.match(line.strip())
