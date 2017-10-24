@@ -1,4 +1,4 @@
-//Version 2017-4-12
+//Version 2017-9-29
 function base64decode(str) {
     var c1, c2, c3, c4;
     var i, len, out;
@@ -111,16 +111,14 @@ function FindProxyForURL(url, host){
     }
     
     //Preload-DirectGo
-    if(suffix(host,'vnet.link')||suffix(host,'vnet.one')){
-        return D;
-    }
+    var L_service_D = eval(base64decode('WyJnb29nbGUuY29tIiwiZ29vZ2xlLmNvLmpwIiwiZ29vZ2xlLmNvbS5oayIsImdzdGF0aWMuY29tIiwiZ29vZ2xldXNlcmNvbnRlbnRzLmNvbSIsImdvb2dsZWFwaXMuY29tIiwieW91dHViZS5jb20iLCJ5dGltZy5jb20iLCJ2bmV0Lm9uZSIsInZuZXQubGluayIsInRhd2sudG8iLCJqc2RlbGl2ci5uZXQiLCJmYWNlYm9vay5jb20iLCJ0d2l0dGVyLmNvbSIsImdtYWlsLmNvbSJd'));
+    var L2x_D = loopc(L_service_D,host,D);
+    if(L2x_D!==false){return L2x_D;}
     
     var L_direct = eval(base64decode('WyJlYmF0ZXMuY24iXQ=='));
 var L1x = loopc(L_direct,host,D);
 if(L1x!==false){return L1x;}
     
-        
-        
         
         
         
