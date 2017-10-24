@@ -1,7 +1,0 @@
-.DS_Store
-scripts/
-*.zip
-*.xpi
-.git/
-.gitignore
-.jpmignore
