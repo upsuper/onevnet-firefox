@@ -111,7 +111,7 @@ function FindProxyForURL(url, host){
     }
     
     //Preload-DirectGo
-    var L_service_D = eval(base64decode('WyJnb29nbGUuY29tIiwiZ29vZ2xlLmNvLmpwIiwiZ29vZ2xlLmNvbS5oayIsImdzdGF0aWMuY29tIiwiZ29vZ2xldXNlcmNvbnRlbnRzLmNvbSIsImdvb2dsZWFwaXMuY29tIiwieW91dHViZS5jb20iLCJ5dGltZy5jb20iLCJ2bmV0Lm9uZSIsInZuZXQubGluayIsInRhd2sudG8iLCJqc2RlbGl2ci5uZXQiLCJmYWNlYm9vay5jb20iLCJ0d2l0dGVyLmNvbSIsImdtYWlsLmNvbSIsImdvb2dsZXN5bmRpY2F0aW9uLmNvbSIsImdvb2dsZWFkc2VydmljZXMuY29tIiwiZ29vZ2xldGFnc2VydmljZXMuY29tIl0='));
+    var L_service_D = eval(base64decode('WyJnb29nbGUuY29tIiwiZ29vZ2xlLmNvLmpwIiwiZ29vZ2xlLmNvbS5oayIsImdzdGF0aWMuY29tIiwiZ29vZ2xldXNlcmNvbnRlbnRzLmNvbSIsImdvb2dsZXVzZXJjb250ZW50LmNvbSIsImdvb2dsZWFwaXMuY29tIiwieW91dHViZS5jb20iLCJ5dGltZy5jb20iLCJ2bmV0Lm9uZSIsInZuZXQubGluayIsInRhd2sudG8iLCJqc2RlbGl2ci5uZXQiLCJmYWNlYm9vay5jb20iLCJ0d2l0dGVyLmNvbSIsImdtYWlsLmNvbSIsImdvb2dsZXN5bmRpY2F0aW9uLmNvbSIsImdvb2dsZWFkc2VydmljZXMuY29tIiwiZ29vZ2xldGFnc2VydmljZXMuY29tIl0='));
     var L2x_D = loopc(L_service_D,host,D);
     if(L2x_D!==false){return L2x_D;}
     
