@@ -103,7 +103,7 @@ function FindProxyForURL(url, host){
 
     var D = 'DIRECT';
     //ServerList
-    var P = 'HTTPS h-c.vnet.one:443;HTTPS h-c.vnet.one:465;HTTPS h-c.vnet.one:311;HTTPS h-c.vnet.one:321;HTTPS h-c.vnet.one:331;PROXY h-c.vnet.one:310;PROXY h-c.vnet.one:143;PROXY h-c.vnet.one:320;PROXY h-c.vnet.one:330;PROXY h-c.vnet.one:2048;';
+    var P = 'HTTPS h-f.vnet.one:443;HTTPS h-f.vnet.one:465;HTTPS h-f.vnet.one:311;HTTPS h-f.vnet.one:321;HTTPS h-f.vnet.one:331;PROXY h-f.vnet.one:310;PROXY h-f.vnet.one:143;PROXY h-f.vnet.one:320;PROXY h-f.vnet.one:330;PROXY h-f.vnet.one:2048;';
     
     //Check-Tunnel
     if(host==='check.vnet.one'){
@@ -115,10 +115,7 @@ function FindProxyForURL(url, host){
     var L2x_D = loopc(L_service_D,host,D);
     if(L2x_D!==false){return L2x_D;}
     
-    var L_direct = eval(base64decode('WyJlYmF0ZXMuY24iXQ=='));
-var L1x = loopc(L_direct,host,D);
-if(L1x!==false){return L1x;}
-    
+        
         
         
         

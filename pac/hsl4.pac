@@ -104,7 +104,7 @@ function FindProxyForURL(url, host){
 
     var D = 'DIRECT';
     //ServerList
-    var P = 'HTTPS hsline-4.vnet.one:443;HTTPS hsline-4.vnet.one:465;HTTPS hsline-4.vnet.one:311;HTTPS hsline-4.vnet.one:321;HTTPS hsline-4.vnet.one:331;PROXY hsline-4.vnet.one:310;PROXY hsline-4.vnet.one:143;PROXY hsline-4.vnet.one:320;PROXY hsline-4.vnet.one:330;PROXY hsline-4.vnet.one:2048;';
+    var P = 'HTTPS h-c.vnet.one:443;HTTPS h-c.vnet.one:465;HTTPS h-c.vnet.one:311;HTTPS h-c.vnet.one:321;HTTPS h-c.vnet.one:331;PROXY h-c.vnet.one:310;PROXY h-c.vnet.one:143;PROXY h-c.vnet.one:320;PROXY h-c.vnet.one:330;PROXY h-c.vnet.one:2048;';
     
     //Check-Tunnel
     if(host==='check.vnet.one'){
